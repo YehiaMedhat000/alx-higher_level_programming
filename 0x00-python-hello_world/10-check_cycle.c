@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * check-cycle - Checks for loops in
+ * check_cycle - Checks for loops in
  * linked lists
  * @list: The list in interest
  * Return: 1 if it's looped, 0 otherwise
