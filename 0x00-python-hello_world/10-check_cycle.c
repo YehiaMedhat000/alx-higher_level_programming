@@ -10,7 +10,7 @@
 int check_cycle(listint_t *list)
 {
 	/* make a fixed node and a moving node*/
-	listint_t fixed = list, moving = list;
+	listint_t *fixed = list, *moving = list->next;
 
 	/* iterate over the list */
 	/* if the list isn't ended */
