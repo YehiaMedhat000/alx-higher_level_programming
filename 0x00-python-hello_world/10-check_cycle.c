@@ -14,12 +14,16 @@ int check_cycle(listint_t *list)
 
 	/* iterate over the list */
 	/* if the list isn't ended */
-	while (moving->next)
+	while (fixed->next)
 	{
-		/* and moving == fixed -> is cycled */
-		if (moving == fixed)
-			return (1);
-		moving = moving->next;
+		while (moving->next)
+		{
+			/* and moving == fixed -> is cycled */
+			if (moving == fixed)
+				return (1);
+			moving = moving->next;
+		}
+		fixed = fixed->next;
 	}
 	/* Otherwise isn't cycled and return 0 */
 	return (0);
