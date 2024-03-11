@@ -9,21 +9,17 @@
 
 int check_cycle(listint_t *list)
 {
-	/* make a fixed node and a moving node*/
-	listint_t *fixed = list, *moving = list->next;
+	/* make a slow node and a fast node*/
+	listint_t *slow = list, *fast = list;
 
-	/* iterate over the list */
-	/* if the list isn't ended */
-	while (fixed->next)
+	if (!list)
+		return (0);
+	while (!fast && !slow)
 	{
-		while (moving->next)
-		{
-			/* and moving == fixed -> is cycled */
-			if (moving == fixed)
-				return (1);
-			moving = moving->next;
-		}
-		fixed = fixed->next;
+		fast = (fast->next)->next;
+		slow = slow->next;
+		if (fast == slow)
+			return (1);
 	}
 	/* Otherwise isn't cycled and return 0 */
 	return (0);
