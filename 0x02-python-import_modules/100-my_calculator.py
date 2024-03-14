@@ -7,8 +7,6 @@ if __name__ == "__main__":
 
     if ac != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        print(ac)
-        print(s.argv)
         s.exit(1)
 
     a = int(s.argv[1])
