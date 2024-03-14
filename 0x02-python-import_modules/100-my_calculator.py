@@ -1,26 +1,27 @@
 #!/usr/bin/python3
+#!/usr/bin/python3
 if __name__ == "__main__":
-    from calculator_1 import add, sub, mul, div
-    import sys as s
+    import sys
 
-    ac = len(s.argv[1:])
-
-    if ac != 3:
+    nargs = len(sys.argv) - 1
+    if nargs != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        s.exit(1)
+        sys.exit(1)
 
-    a = int(s.argv[1])
-    b = int(s.argv[3])
+    op = sys.argv[2]
+    if op != '+' and op != '-' and op != '*' and op != '/':
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
 
-    match s.argv[2]:
-        case '+':
-            print("{} {} {} = {}".format(a, s.argv[2], b, add(a, b)))
-        case '-':
-            print("{} {} {} = {}".format(a, s.argv[2], b, sub(a, b)))
-        case '*':
-            print("{} {} {} = {}".format(a, s.argv[2], b, mul(a, b)))
-        case '/':
-            print("{} {} {} = {}".format(a, s.argv[2], b, div(a, b)))
-        case _:
-            print("Unknown operator. Available operators: +, -, * and /")
-            s.exit(1)
+    from calculator_1 import add, sub, mul, div
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
+
+    if op == '+':
+        print("{} + {} = {}".format(a, b, add(a, b)))
+    elif op == '-':
+        print("{} - {} = {}".format(a, b, sub(a, b)))
+    elif op == '*':
+        print("{} * {} = {}".format(a, b, mul(a, b)))
+    else:
+        print("{} / {} = {}".format(a, b, div(a, b)))
