@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 def say_my_name(first_name, last_name=""):
-    # first_name and last_name must be strings otherwise
-    # raise a TypeError exception with the message
-    #  or last_name must be a string
+    """
+    Prints simple sentence
+
+    Args:
+    first_name -- The first name to be used
+    last_name -- The second name to be used
+    """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
     if not isinstance(last_name, str):
