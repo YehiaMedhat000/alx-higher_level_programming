@@ -5,22 +5,17 @@ Using the `matrix_divided` function
 
 ##################### Importing the function #####################
 >>> matrix_div = __import__("2-matrix_divided").matrix_divided
-
-################ If not passing enough arguments #################
-
-################ Not passing any ################
+>>> 
 >>> matrix_div()
 Traceback (most recent call last):
 	...
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
-
-################ Not passing div ################
+>>> 
 >>> matrix_div([[1, 2, 3], [4, 5, 6]])
 Traceback (most recent call last):
 	...
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
-
-################ Not passing matrix ################
+>>> 
 >>> matrix_div(0)
 Traceback (most recent call last):
 	...
@@ -45,10 +40,12 @@ ZeroDivisionError: division by zero
 Traceback (most recent call last):
 	...
 TypeError: div must be a number
-
-########### Needs modification ############
->>> matrix_div([[1, 2, 3], [4, 5, 6]], float("nan"))
-[[nan, nan, nan], [nan, nan, nan]]
+>>> 
+>>> matrix_div([[1, 2, 3],[4, 5, 6]], float("nan"))
+Traceback (most recent call last):
+	...
+TypeError: div must be a number
 >>> 
 >>> matrix_div([[1, 2, 3], [4, 5, 6]], 5)
 [[0.2, 0.4, 0.6], [0.8, 1.0, 1.2]]
+>>> 
