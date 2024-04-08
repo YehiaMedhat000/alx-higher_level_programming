@@ -1,0 +1,34 @@
+The `5-text_indentation` module
+===============================
+Using the `5-text_indentation` function
+---------------------------------------
+
+>>> text_indent = __import__("5-text_indentation").text_indentation
+>>>
+>>> text_indent()
+Traceback (most recent call last):
+	...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> 
+>>> text_indent("")
+>>>
+>>> text_indent("?")
+<BLANKLINE>
+<BLANKLINE>
+>>> text_indent(".")
+<BLANKLINE>
+<BLANKLINE>
+>>> text_indent(",")
+>>> 
+>>> text_indent("yehia medhat,")
+>>> 
+>>> text_indent(50)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+>>> 
+>>> text_indent(0)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+>>>
