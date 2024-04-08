@@ -5,11 +5,12 @@ def matrix_divided(matrix, div):
 
     Args:
     matrix -- A list of lists that represents a matrix
-    div -- The divisor to be used 
+    div -- The divisor to be used
 
     Return:
     A new matrix with the division done
     """
+    err = "matrix must be a matrix (list of lists) of integers/floats"
 
     if not (isinstance(div, int) or isinstance(div, float)):
         raise TypeError("div must be a number")
@@ -28,9 +29,7 @@ def matrix_divided(matrix, div):
             elif isinstance(col, float):
                 pass
             else:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-
-
+                raise TypeError(err)
     new_matrix = []
     # Iterate over the rows
     for row in matrix:
