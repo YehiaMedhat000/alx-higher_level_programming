@@ -13,7 +13,7 @@ def matrix_divided(matrix, div):
 
     if not (isinstance(div, int) or isinstance(div, float)):
         raise TypeError("div must be a number")
-    if div == float("nan"):
+    if div != div:
         raise TypeError("div must be a number")
 
     row_len = len(matrix[0])
