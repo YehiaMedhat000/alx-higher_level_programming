@@ -37,7 +37,7 @@ class Rectangle:
         with printing the message "Bye rectangle..."
         """
 
-        del(self)
+        del (self)
         print("Bye rectangle...")
 
     @property

@@ -41,7 +41,7 @@ class Rectangle:
         """
 
         type(self).number_of_instances -= 1
-        del(self)
+        del (self)
         print("Bye rectangle...")
 
     @property
