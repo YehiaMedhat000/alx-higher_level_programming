@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-
 """
 Class definition that prevents creating attributes
 """
+
+
 class LockedClass:
     """
     LockedClass class definition
