@@ -45,6 +45,7 @@ class Rectangle:
         """
         Setter method for __height
         """
+
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
         elif height < 0:
@@ -55,10 +56,14 @@ class Rectangle:
         """
         Gets the area of the rectangle
         """
+
         return (self.__width * self.__height)
 
     def perimeter(self):
         """
         Gets the perimeter of the rectangle
         """
+
+        if self.__width == 0 or self.__height == 0:
+            return 0
         return ((self.__width + self.__height) * 2)
