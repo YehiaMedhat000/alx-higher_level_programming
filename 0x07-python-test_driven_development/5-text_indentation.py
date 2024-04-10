@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+Script defining a function text_indentation for sake of learning
+to test through using doctest and unittest
+"""
+
+
 def text_indentation(text):
     """
     Prints text with extra lines for each '.', ':', '?' char

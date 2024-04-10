@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+Script defining a function matrix_divided for sake of learning
+to test through using doctest and unittest
+"""
+
+
 def matrix_divided(matrix, div):
     """
     Divides all elements of a matrix

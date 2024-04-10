@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+Script defining a function matrix_mul for sake of learning
+to test through using doctest and unittest
+"""
+
+
 def matrix_mul(m_a, m_b):
 
     """

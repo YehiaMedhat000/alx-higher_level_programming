@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+Script defining a function add_integer for sake of learning
+to test through using doctest and unittest
+"""
+
+
 def add_integer(a, b=98):
     """
     Addition function

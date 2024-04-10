@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+Script defining a function print_square for sake of learning
+to test through using doctest and unittest
+"""
+
+
 def print_square(size):
 
     """

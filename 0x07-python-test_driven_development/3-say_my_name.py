@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+Script defining a function say_my_name for sake of learning
+to test through using doctest and unittest
+"""
+
+
 def say_my_name(first_name, last_name=""):
     """
     Prints simple sentence
