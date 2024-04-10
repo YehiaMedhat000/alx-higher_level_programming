@@ -12,12 +12,12 @@ def text_indentation(text):
     Args:
     text -- The text to be printed
     """
-    if not isinstance(text, str):
+
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
-    old = 0
-    for i, char in enumerate(text):
-        if char in ":.?":
-            print(text[old:i+1])
-            print()
-            old = i + 2
+    for delim in ".:?":
+        text = (delim + "\n\n").join(
+            [line.strip(" ") for line in text.split(delim)])
+
+    print("{}".format(text), end="")
