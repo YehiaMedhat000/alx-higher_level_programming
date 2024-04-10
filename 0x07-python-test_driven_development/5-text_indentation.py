@@ -18,6 +18,6 @@ def text_indentation(text):
     old = 0
     for i, char in enumerate(text):
         if char in ":.?":
-            print(text[old+2:i+1])
+            print(text[old:i+1])
             print()
-            old = i
+            old = i + 2
