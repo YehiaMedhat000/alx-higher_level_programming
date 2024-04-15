@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-""" Module defining Class Mylist """
+""" Module defining Class MyList """
 
 
-class Mylist(list):
+class MyList(list):
     """ Class definition
-        Mylist
+        MyList
 
         Methods:
             print_sorted:

@@ -3,7 +3,7 @@ _________________________________________
 	Using the class `Mylist`
 ________________________________
 
->>> mod = __import__("1-my_list").Mylist
+>>> mod = __import__("1-my_list").MyList
 >>> l1 = mod()
 >>> l1.print_sorted()
 []
