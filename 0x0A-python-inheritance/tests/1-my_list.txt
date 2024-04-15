@@ -1,6 +1,6 @@
-	Test File for 1-my_list.py module
+Test File for 1-my_list.py module
 _________________________________________
-	Using the class `Mylist`
+Using the class `Mylist`
 ________________________________
 
 >>> mod = __import__("1-my_list").MyList
