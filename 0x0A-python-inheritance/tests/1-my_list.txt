@@ -8,6 +8,12 @@ ________________________________
 >>> l1.print_sorted()
 []
 >>>
+>>> l1.__str__()
+'[]'
+>>>
+>>> str(l1)
+'[]'
+>>>
 >>> from random import seed, randint
 >>> seed(44)
 >>> for _ in range(50):
