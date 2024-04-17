@@ -18,6 +18,7 @@ codes = {
 
 size = i = 0
 
+
 def out():
     """ Prints the status code/s that is/are not
         assigned to 0
@@ -27,11 +28,12 @@ def out():
         if val != 0:
             print("{:s}: {:d}".format(key, val))
 
+
 try:
     for line in stdin:
         parsed = line.split()
         if len(parsed) >= 2:
-            status = parsed [-2]
+            status = parsed[-2]
             size += int(parsed[-1])
             if status in codes:
                 codes[status] += 1
@@ -42,4 +44,3 @@ try:
     out()
 except KeyboardInterrupt:
     out()
-
