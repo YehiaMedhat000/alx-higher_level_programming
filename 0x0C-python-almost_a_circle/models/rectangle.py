@@ -110,7 +110,9 @@ class Rectangle(Base):
         """ Method that returns some information
             about the rectangle object
         """
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        first = f" - {self.__width}/{self.__height}"
+        second = f" ({self.id}) {self.__x}/{self.__y}"
+        return ("[Rectangle]" + second + first)
 
     def update(self, *args, **kwargs):
         """ Method to update the values
