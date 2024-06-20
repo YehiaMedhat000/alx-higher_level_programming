@@ -2,5 +2,5 @@
 
 exports.addMeMaybe = function (x, func) {
   x++;
-  func();
+  func(x);
 };
