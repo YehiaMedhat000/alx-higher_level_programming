@@ -14,7 +14,6 @@ fs.readFile(fileA, 'utf8', (err, dataA) => {
 
     fs.writeFile(fileC, concatenatedData, (err) => {
       if (err) throw err;
-      console.log(`Files ${fileA} and ${fileB} concatenated into ${fileC}`);
     });
   });
 });
