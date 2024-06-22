@@ -1,37 +1,19 @@
 #!/usr/bin/python3
-import sys
+"""Lists states"""
+
 import MySQLdb
+from sys import argv
 
 if __name__ == "__main__":
-    # Get the arguments
-    mysql_username = sys.argv[1]
-    mysql_password = sys.argv[2]
-    db_name = sys.argv[3]
-    state_name = sys.argv[4]
-
-    # Connect to the database
-    db = MySQLdb.connect(host="localhost",
-                         user=mysql_username,
-                         passwd=mysql_password,
-                         db=db_name,
-                         port=3306)
-
-    # Create a cursor object
-    cursor = db.cursor()
-
-    # Create the SQL query using parameterized queries
-    query = "SELECT * FROM states WHERE name = '%s' ORDER BY id ASC"
-
-    # Execute the query with the provided state name
-    cursor.execute(query, (state_name,))
-
-    # Fetch all the results
-    rows = cursor.fetchall()
-
-    # Print the results
-    for row in rows:
+    conn = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                           passwd=argv[2], db=argv[3], charset="utf8")
+    cur = conn.cursor()
+    query = """
+SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY states.id ASC"""
+    query = query.format(argv[4])
+    cur.execute(query)
+    query_rows = cur.fetchall()
+    for row in query_rows:
         print(row)
-
-    # Close the cursor and connection
-    cursor.close()
-    db.close()
+    cur.close()
+    conn.close()
