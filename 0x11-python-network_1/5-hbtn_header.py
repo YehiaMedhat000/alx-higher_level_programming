@@ -6,6 +6,7 @@ import requests as r
 import sys
 
 
-url = sys.argv[1]
-response = r.get(url)
-print(response.headers.get("X-Request-Id"))
+if __name__ == "__main__":
+    url = sys.argv[1]
+    response = r.get(url)
+    print(response.headers.get("X-Request-Id"))
