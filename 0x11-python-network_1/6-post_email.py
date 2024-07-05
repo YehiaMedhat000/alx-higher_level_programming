@@ -6,8 +6,8 @@ import requests as r
 import sys
 
 
-url = sys.argv[1]
-email = {"email": sys.argv[2]}
 if __name__ == "__main__":
+    url = sys.argv[1]
+    email = {"email": sys.argv[2]}
     response = r.post(url, params=email)
     print(response.text)
