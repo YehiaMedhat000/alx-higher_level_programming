@@ -9,7 +9,8 @@ if __name__ == "__main__":
 
     ac = len(sys.argv)
     if ac == 2:
-        letter = {'q': sys.argv[1]}
+        val = sys.argv[1] if sys.argv[1] else ""
+        letter = {'q': val}
 
         # Handling the request
         response = r.post(url="http://0.0.0.0:5000/search_user", data=letter)
