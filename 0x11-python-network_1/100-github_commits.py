@@ -3,7 +3,6 @@
     from newest to oldest """
 import requests as r
 import sys
-from pprint import pp
 
 
 if __name__ == "__main__":
