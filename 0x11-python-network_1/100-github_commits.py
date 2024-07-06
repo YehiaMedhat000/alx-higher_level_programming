@@ -16,7 +16,10 @@ if __name__ == "__main__":
     response = r.get(url, headers=headers)
     commits = response.json()
 
-    for i in range(10):
-        sha = commits[i].get("sha")
-        committer = commits[i]["commit"]["author"]["name"]
-        print(f"{sha}: {committer}")
+    try:
+        for i in range(10):
+            sha = commits[i].get("sha")
+            committer = commits[i]["commit"]["author"]["name"]
+            print(f"{sha}: {committer}")
+    except IndexError:
+        pass
