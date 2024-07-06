@@ -8,20 +8,18 @@ import sys
 if __name__ == "__main__":
 
     ac = len(sys.argv)
-    if ac == 2:
-        val = sys.argv[1] if sys.argv[1] else ""
-        letter = {'q': val}
+    val = "" if ac == 1 else sys.argv[1]
+    letter = {'q': val}
 
-        # Handling the request
-        response = r.post(url="http://0.0.0.0:5000/search_user", data=letter)
+    # Handling the request
+    response = r.post(url="http://0.0.0.0:5000/search_user", data=letter)
+    try:
         info = response.json()
-
-        # Getting output
         size = len(info)
         if size == 0:
             print("No result")
         else:
             print(f"[{info['id']}] {info['name']}")
 
-    else:
-        print("No result")
+    except ValueError:
+        print("Not a Valid JSON")
