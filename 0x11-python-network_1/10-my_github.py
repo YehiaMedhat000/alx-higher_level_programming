@@ -12,7 +12,7 @@ if __name__ == "__main__":
     passwd = sys.argv[2]
 
     url = "https://api.github.com/user"
-    
+
     # Sending the request
     auth = HTTPBasicAuth(user, passwd)
     response = r.get(url, auth=auth)
