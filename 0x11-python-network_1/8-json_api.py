@@ -15,8 +15,7 @@ if __name__ == "__main__":
     response = r.post(url="http://0.0.0.0:5000/search_user", data=letter)
     try:
         info = response.json()
-        size = len(info)
-        if size == 0:
+        if info == {}:
             print("No result")
         else:
             print(f"[{info['id']}] {info['name']}")
