@@ -9,5 +9,6 @@ import sys
 if __name__ == "__main__":
     url = sys.argv[1]
     email = {"email": sys.argv[2]}
-    response = r.post(url, params=email)
+
+    response = r.post(url, data=email)
     print(response.text)
