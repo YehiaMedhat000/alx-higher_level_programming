@@ -21,5 +21,3 @@ if __name__ == "__main__":
         sha = commits[i].get("sha")
         committer = commits[i]["commit"]["author"]["name"]
         print(f"{sha}: {committer}")
-
-
